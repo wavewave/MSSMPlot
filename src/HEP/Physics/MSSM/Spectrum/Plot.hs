@@ -9,7 +9,7 @@ import HROOT.Type
 import HROOT.Function
 import HROOT.Class
 
-import HEP.Physics.MSSM.Type
+import HEP.Physics.MSSM.OutputPhys
   
 
 spectrumplot :: FilePath -> OutputPhys -> Double -> Double -> IO ()
