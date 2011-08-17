@@ -1,6 +1,6 @@
 module Main where
 
-import HEP.Physics.MSSM.Type
+import HEP.Physics.MSSM.OutputPhys
 import HEP.Physics.MSSM.Spectrum.Plot
 
 testphys = OutputPhys {
@@ -49,4 +49,4 @@ testphys = OutputPhys {
 } 
 
 main = do 
-  helloworld testphys
+  spectrumplot "test.pdf"  testphys 0 2000

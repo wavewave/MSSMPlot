@@ -18,7 +18,9 @@ spectrumplot fp (OutputPhys {..}) ymin ymax = do
       
   c1 <- newTCanvas "test" "test" 640 480  
   
-  setBorderMode c1 0 
+  frame <- getFrame c1 
+
+  setBorderMode frame 0 
   setFillStyle  c1 1001
   setFillColor  c1 10
   
