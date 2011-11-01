@@ -5,9 +5,6 @@ module HEP.Physics.MSSM.Spectrum.Plot where
 import Control.Monad
 
 import HROOT
-import HROOT.Type
-import HROOT.Function
-import HROOT.Class
 
 import HEP.Physics.MSSM.OutputPhys
   
@@ -27,8 +24,8 @@ spectrumplot fp (OutputPhys {..}) ymin ymax = do
   range1 <- newTH2F "test" "test" 100 0.0 130.0 100 ymin ymax 
   draw range1 "" 
   
-  xaxis <- getXaxis range1 
-  yaxis <- getYaxis range1
+  xaxis <- tH1GetXaxis (upcastTH1 range1)
+  yaxis <- tH1GetYaxis (upcastTH1 range1)
   
   setTickLength xaxis 0 
   setLabelSize xaxis 0 
